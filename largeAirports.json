@@ -2931,10 +2931,10 @@
 		"type": "Feature",
 		"geometry": {
 			"type": "Point", 
-			"coordinates": [Barcelona International Airport, 41.30303]
+			"coordinates": [2.07593, 41.30303]
 		},
 		"properties": {
-			"title": "Burgos Airport",
+			"title": "Barcelona International Airport",
 			"iata": "BCN",
 			"size": "large"
 		}
@@ -3075,10 +3075,10 @@
 		"type": "Feature",
 		"geometry": {
 			"type": "Point", 
-			"coordinates": [Thessaloniki Macedonia International Airport, 40.520832]
+			"coordinates": [22.972221, 40.520832]
 		},
 		"properties": {
-			"title": "Skiros Airport",
+			"title": "Thessaloniki Macedonia International Airport",
 			"iata": "SKG",
 			"size": "large"
 		}
@@ -3222,7 +3222,7 @@
 			"coordinates": [12.204444, 45.655113]
 		},
 		"properties": {
-			"title": "Bologna \/ Borgo Panigale Airport",
+			"title": "Treviso \/ Sant'Angelo Airport",
 			"iata": "TSF",
 			"size": "large"
 		}
