@@ -6,7 +6,7 @@ install node v4.6.0 LTS
   
 Go to a shell you use and move into the folder: yotest.
 Then write the command:
-    * npm install -g gulp gulp-cli bower
+Markup: * npm install -g gulp gulp-cli bower
 
 bower install
 
