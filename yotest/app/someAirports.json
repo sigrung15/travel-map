@@ -166,5 +166,293 @@
 			"iata": "MAN",
 			"size": "large"
 		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [8.570773, 50.050735]
+		},
+		"properties": {
+			"title": "Frankfurt am Main International Airport",
+			"iata": "FRA",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-4.431782, 55.864212]
+		},
+		"properties": {
+			"title": "Glasgow International Airport",
+			"iata": "GLA",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [17.930365, 59.64982]
+		},
+		"properties": {
+			"title": "Stockholm-Arlanda Airport",
+			"iata": "ARN",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-6.24357, 53.42728]
+		},
+		"properties": {
+			"title": "Dublin Airport",
+			"iata": "DUB",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [7.613139, 51.514828]
+		},
+		"properties": {
+			"title": "Dortmund Airport",
+			"iata": "DTM",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [10.006414, 53.63128]
+		},
+		"properties": {
+			"title": "Hamburg Airport",
+			"iata": "HAM",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [2.567023, 49.003197]
+		},
+		"properties": {
+			"title": "Charles de Gaulle International Airport",
+			"iata": "CDG",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [2.3597, 48.728283]
+		},
+		"properties": {
+			"title": "Paris-Orly Airport",
+			"iata": "ORY",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [10.399915, 43.69871]
+		},
+		"properties": {
+			"title": "Pisa San Giusto - Galileo Galilei International Airport",
+			"iata": "PSA",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [19.261621, 47.433037]
+		},
+		"properties": {
+			"title": "Budapest Listz Ferenc international Airport",
+			"iata": "BUD",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [12.250346, 41.794594]
+		},
+		"properties": {
+			"title": "Leonardo Da Vinci (Fiumicino) International Airport",
+			"iata": "FCO",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [2.730388, 39.547653]
+		},
+		"properties": {
+			"title": "Palma De Mallorca Airport",
+			"iata": "PMI",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-3.570209, 40.46515]
+		},
+		"properties": {
+			"title": "Madrid Barajas International Airport",
+			"iata": "MAD",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-9.128165, 38.770042]
+		},
+		"properties": {
+			"title": "Lisbon Portela Airport",
+			"iata": "LIS",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [31.40647, 30.120106]
+		},
+		"properties": {
+			"title": "Cairo International Airport",
+			"iata": "CAI",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [10.21709, 36.847622]
+		},
+		"properties": {
+			"title": "Tunis Carthage International Airport",
+			"iata": "TUN",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [55.352917, 25.248665]
+		},
+		"properties": {
+			"title": "Dubai International Airport",
+			"iata": "DXB",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [37.416573, 55.966324]
+		},
+		"properties": {
+			"title": "Sheremetyevo International Airport",
+			"iata": "SVO",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [24.96645, 60.31795]
+		},
+		"properties": {
+			"title": "Helsinki Vantaa Airport",
+			"iata": "HEL",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [24.798702, 59.416622]
+		},
+		"properties": {
+			"title": "Tallinn Airport",
+			"iata": "TLL",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [12.294878, 57.66664]
+		},
+		"properties": {
+			"title": "Gothenburg-Landvetter Airport",
+			"iata": "GOT",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [9.147874, 55.747383]
+		},
+		"properties": {
+			"title": "Billund Airport",
+			"iata": "BLL",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [30.80135, 36.89928]
+		},
+		"properties": {
+			"title": "Antalya International Airport",
+			"iata": "AYT",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [23.946486, 37.93635]
+		},
+		"properties": {
+			"title": "Eleftherios Venizelos International Airport",
+			"iata": "ATH",
+			"size": "large"
+		}
     }
 ]
