@@ -64,7 +64,10 @@ map.on('load', function () {
       "type": "circle",
       "source": "points",
       "paint": {
-            "circle-radius": 10,
+            'circle-radius': {
+                'base': 1.75,
+                'stops': [[12, 5], [15, 30]]
+            },
             "circle-color": "#007cbf"
       }
   });
@@ -76,13 +79,24 @@ map.on('load', function () {
           "icon-image": "{icon}-15",
           "text-field": "{iata}",
           "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+          "text-size": 8,
           "text-offset": [0, 0.6],
           "text-anchor": "top"
       }
   });
 });
 
+// var airportPoints = document.getElementById('points');
+// var zoomThreshold = 4;
+// map.on('zoom', function() {
+//     if (map.getZoom() > zoomThreshold) {
+//     	airportPoints.paint.circle-radius = 5;
+//     } else {
+//         airportPoints.paint.circle-radius = 20;
+//     }
+// });
 
+var linesSourceID;
 map.on('click', function (e) {
     // Use queryRenderedFeatures to get features at a click event's point
     // Use layer option to avoid getting results from other layers
@@ -95,7 +109,7 @@ map.on('click', function (e) {
         map.flyTo({center: features[0].geometry.coordinates});
     }
     var feature = features[0];
-    var sourceID = feature.title + Math.random().toString();
+    linesSourceID = feature.title + Math.random().toString();
 
     var fares = getFares(feature.properties.iata, "2016-10-09");
     var featureLines = [];
@@ -108,7 +122,11 @@ map.on('click', function (e) {
     	if(result.length != 0){
     		var f = {
 	    		type: "Feature",
-	    		properties: {},
+	    		properties: {
+	    			price: elem.conv_fare,
+	    			from: elem.a,
+	    			to: elem.b
+	    		},
 	    		geometry: {
 	    			type: "LineString",
 	    			coordinates: [
@@ -138,7 +156,7 @@ map.on('click', function (e) {
 
 
 	//the source from which the line will be drawn gets added0
-	map.addSource(sourceID, {
+	map.addSource(linesSourceID, {
 		"type": "geojson",
 		"data": {
 			"type": "FeatureCollection",
@@ -167,14 +185,14 @@ map.on('click', function (e) {
 	map.addLayer({
 		"id": "route",
 		"type": "line",
-		"source": sourceID,
+		"source": linesSourceID,
 		"layout": {
 			"line-join": "round",
 			"line-cap": "square"
 		},
 		"paint": {
 			"line-color": "#007cbf",
-			"line-width": 2
+			"line-width": 3
 		}
 	});
 	//to here is the clicky line stuff
@@ -185,12 +203,27 @@ map.on('click', function (e) {
 	//	.addTo(map);
 });
 
-
+var popup = new mapboxgl.Popup({
+			    closeButton: false,
+			    closeOnClick: false
+			});
 // Use the same approach as above to indicate that the symbols are clickable
 // by changing the cursor style to 'pointer'.
 map.on('mousemove', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['points'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['points', 'route'] });
     map.getCanvas().style.cursor = features.length ? 'pointer' : '';
+
+    var featuresFlights = map.queryRenderedFeatures(e.point, { layers: ["route"] });
+    if (!featuresFlights.length) {
+        popup.remove();
+        return;
+    }
+        if (featuresFlights.length) {
+        	popup.setLngLat(e.lngLat)
+        		.setHTML(Math.ceil(featuresFlights[0].properties.price) + " ISK")
+        		.addTo(map);
+            // map.setFilter("route-hover", ["==", "name", features[0].properties.name]);
+        }
 });
 
 

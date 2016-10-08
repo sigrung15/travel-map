@@ -454,5 +454,473 @@
 			"iata": "ATH",
 			"size": "large"
 		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-0.557381, 38.287098]
+		},
+		"properties": {
+			"title": "Alicante International Airport",
+			"iata": "ALC",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [16.563583, 48.11972]
+		},
+		"properties": {
+			"title": "Vienna International Airport",
+			"iata": "VIE",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [11.790143, 48.353004]
+		},
+		"properties": {
+			"title": "Munich International Airport",
+			"iata": "MUC",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [16.06152, 45.733242]
+		},
+		"properties": {
+			"title": "Zagreb Airport",
+			"iata": "ZAG",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-3.339075, 51.39877]
+		},
+		"properties": {
+			"title": "Cardiff International Airport",
+			"iata": "CWL",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [23.41443, 42.688343]
+		},
+		"properties": {
+			"title": "Sofia Airport",
+			"iata": "SOF",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [20.306944, 44.819443]
+		},
+		"properties": {
+			"title": "Belgrade Nikola Tesla Airport",
+			"iata": "BEG",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-73.78817, 40.642334]
+		},
+		"properties": {
+			"title": "John F Kennedy International Airport",
+			"iata": "JFK",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-118.40828, 33.943398]
+		},
+		"properties": {
+			"title": "Los Angeles International Airport",
+			"iata": "LAX",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-123.17919, 49.1947]
+		},
+		"properties": {
+			"title": "Vancouver International Airport",
+			"iata": "YVR",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-73.74991, 45.457714]
+		},
+		"properties": {
+			"title": "Montreal Pierre Elliott Trudeau International Airport",
+			"iata": "YUL",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-99.07278, 19.435278]
+		},
+		"properties": {
+			"title": "Licenciado Benito Juarez International Airport",
+			"iata": "MEX",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-157.92166, 21.325832]
+		},
+		"properties": {
+			"title": "Honolulu International Airport",
+			"iata": "HNL",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-16.5725, 28.044443]
+		},
+		"properties": {
+			"title": "Tenerife South Airport",
+			"iata": "TFS",
+			"size": "large"
+		}
+    },
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-16.345982, 28.488056]
+		},
+		"properties": {
+			"title": "Tenerife Norte Airport",
+			"iata": "TFN",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-90.25639, 29.984564]
+		},
+		"properties": {
+			"title": "Louis Armstrong New Orleans International Airport",
+			"iata": "MSY",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [54.645973, 24.426912]
+		},
+		"properties": {
+			"title": "Abu Dhabi International Airport",
+			"iata": "AUH",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-123.43096, 48.640266]
+		},
+		"properties": {
+			"title": "Victoria International Airport",
+			"iata": "YYJ",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-117.59765, 34.06068]
+		},
+		"properties": {
+			"title": "Ontario International Airport",
+			"iata": "ONT",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-81.75433, 26.542835]
+		},
+		"properties": {
+			"title": "Southwest Florida International Airport",
+			"iata": "RSW",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [5.222137, 43.44178]
+		},
+		"properties": {
+			"title": "Marseille Provence Airport",
+			"iata": "MRS",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [4.763385, 52.30907]
+		},
+		"properties": {
+			"title": "Amsterdam Airport Schiphol",
+			"iata": "AMS",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [4.483602, 50.89717]
+		},
+		"properties": {
+			"title": "Brussels Airport",
+			"iata": "BRU",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [5.228169, 60.289062]
+		},
+		"properties": {
+			"title": "Bergen Airport, Flesland",
+			"iata": "BGO",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [139.78453, 35.54907]
+		},
+		"properties": {
+			"title": "Tokyo International Airport",
+			"iata": "HND",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [14.266638, 50.10619]
+		},
+		"properties": {
+			"title": "Ruzyn International Airport",
+			"iata": "PRG",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [6.105774, 46.229633]
+		},
+		"properties": {
+			"title": "Geneva Cointrin International Airport",
+			"iata": "GVA",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [9.698713, 45.665314]
+		},
+		"properties": {
+			"title": "Bergamo Orio Al Serio Airport",
+			"iata": "BGY",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [7.643049, 45.191456]
+		},
+		"properties": {
+			"title": "Torino Caselle International Airport",
+			"iata": "TRN",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [9.193624, 48.69073]
+		},
+		"properties": {
+			"title": "Stuttgart Airport",
+			"iata": "STR",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-81.308304, 28.432177]
+		},
+		"properties": {
+			"title": "Orlando International Airport",
+			"iata": "MCO",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-87.74087, 41.788136]
+		},
+		"properties": {
+			"title": "Chicago Midway International Airport",
+			"iata": "MDW",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-89.98226, 35.04458]
+		},
+		"properties": {
+			"title": "Memphis International Airport",
+			"iata": "MEM",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-86.39029, 32.305042]
+		},
+		"properties": {
+			"title": "Montgomery Regional (Dannelly Field) Airport",
+			"iata": "MGM",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-80.27824, 25.796]
+		},
+		"properties": {
+			"title": "Miami International Airport",
+			"iata": "MIA",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-92.043655, 32.51184]
+		},
+		"properties": {
+			"title": "Monroe Regional Airport",
+			"iata": "MLU",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-93.21092, 44.883015]
+		},
+		"properties": {
+			"title": "Minneapolis-St Paul International Wold-Chamberlain Airport",
+			"iata": "MSP",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-90.25639, 29.984564]
+		},
+		"properties": {
+			"title": "Louis Armstrong New Orleans International Airport",
+			"iata": "MSY",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-71.02018, 42.36646]
+		},
+		"properties": {
+			"title": "General Edward Lawrence Logan International Airport",
+			"iata": "BOS",
+			"size": "large"
+		}
     }
 ]
