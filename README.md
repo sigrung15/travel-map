@@ -1,3 +1,17 @@
 ﻿# Click a Trip
 
-Helps you visualize a trip you might want to go on. 
+install node v4.6.0 LTS
+
+  --> https://nodejs.org/en/
+
+npm install -g gulp gulp-cli bower
+
+bower install
+
+npm install
+
+rm -rf node_modules
+
+npm install
+
+gulp serve
