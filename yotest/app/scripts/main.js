@@ -1,5 +1,16 @@
 console.log('\'Allo \'Allo!');
 
+$(document).ready(function(){
+    var date_input=$('input[name="date"]'); //our date input has the name "date"
+    var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+    date_input.datepicker({
+        format: 'dd-mm-yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+    })
+});
+
 mapboxgl.accessToken = 'pk.eyJ1Ijoicmlra2l0aWtrIiwiYSI6ImNpdHp2M3E3aDAwNGg0NW9hdWVsb3o3eG4ifQ.Rm0pPY2uJa1DNWbPdFUVmw';
 var map = new mapboxgl.Map({
   container: 'map',
@@ -8,8 +19,13 @@ var map = new mapboxgl.Map({
   zoom: 2
 });
 
+var airportsExist = false;
+var routeExist = false;
+
 function getFares(dep, date){
+
 	date = '2016-10-09';
+
 	var api = 'http://api.dohop.com/api/v1/livestore/en/IS/per-country/';
 	var url = api.concat(dep,"/",date,"/",date,"?currency=ISK");
 	var json = null;
@@ -68,7 +84,7 @@ map.on('load', function () {
                 'base': 1.75,
                 'stops': [[12, 5], [15, 30]]
             },
-            "circle-color": "#007cbf"
+            "circle-color": "#f4c242"
       }
   });
   map.addLayer({
@@ -84,6 +100,7 @@ map.on('load', function () {
           "text-anchor": "top"
       }
   });
+  airportsExist = true;
 });
 
 // var airportPoints = document.getElementById('points');
@@ -191,7 +208,7 @@ map.on('click', function (e) {
 			"line-cap": "square"
 		},
 		"paint": {
-			"line-color": "#007cbf",
+			"line-color": "#f48342",
 			"line-width": 3
 		}
 	});
@@ -201,6 +218,7 @@ map.on('click', function (e) {
 	//popup.setLngLat(feature.geometry.coordinates)
 	//	.setText("hey baby ;)")
 	//	.addTo(map);
+	routeExist = true;
 });
 
 var popup = new mapboxgl.Popup({
@@ -210,10 +228,19 @@ var popup = new mapboxgl.Popup({
 // Use the same approach as above to indicate that the symbols are clickable
 // by changing the cursor style to 'pointer'.
 map.on('mousemove', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['points', 'route'] });
-    map.getCanvas().style.cursor = features.length ? 'pointer' : '';
+	if(airportsExist && routeExist){
+		var features = map.queryRenderedFeatures(e.point, { layers: ['points', 'route'] });
+    	map.getCanvas().style.cursor = features.length ? 'pointer' : '';
+	}
+	else if(airportsExist && !routeExist){
+		var features = map.queryRenderedFeatures(e.point, { layers: ['points'] });
+    	map.getCanvas().style.cursor = features.length ? 'pointer' : '';
+	}
 
-    var featuresFlights = map.queryRenderedFeatures(e.point, { layers: ["route"] });
+	var featuresFlights = [];
+	if(routeExist){
+		var featuresFlights = map.queryRenderedFeatures(e.point, { layers: ["route"] });
+	}
     if (!featuresFlights.length) {
         popup.remove();
         return;
