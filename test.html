@@ -1,314 +1,179 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
     </style>
 </head>
 <body>
+
 <style>
-#map {
-    position:absolute; 
-    left:25%;
-    top:0;
-    bottom:0;
-    width: 75%;
+.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{
+  font-family: Arial, Helvetica, sans-serif;
+  color: black
 }
+
+.bootstrap-iso form button, .bootstrap-iso form button:hover{
+  color: white !important;
+}
+
+.asteriskField{
+  color: red;
+}
+
+.bootstrap-iso form .input-group-addon {
+  color:#555555;
+  background-color:
+  #ffffff;
+  border-radius: 4px;
+  padding-left:12px
+}
+
 .map-overlay {
-    position: absolute;
-    width: 25%;
-    top: 0;
-    bottom: 0;
-    left: 0;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    background-color: #fff;
-    max-height: 100%;
-    overflow: hidden;
-}
-
-.map-overlay fieldset {
-    display: none;
-    background: #ddd;
-    border: none;
+    position: absolute;
+    width: 200px;
+    top: 0;
+    left: 0;
     padding: 10px;
-    margin: 0;
 }
 
-.map-overlay input {
-    display: block;
-    border: none;
-    width: 100%;
+.map-overlay .map-overlay-inner {
+    background-color: #fff;
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.10);
     border-radius: 3px;
     padding: 10px;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
-.map-overlay .listing {
-    overflow: auto;
-    max-height: 100%;
-}
-
-.map-overlay .listing > * {
-    display: block;
-    padding: 5px 10px;
-    margin: 0;
-}
-
-.map-overlay .listing a {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    color: #404;
-    text-decoration: none;
-}
-
-.map-overlay .listing a:last-child {
+.map-overlay-inner fieldset {
     border: none;
+    padding: 0;
+    margin: 0 0 10px;
 }
 
-.map-overlay .listing a:hover {
-    background: #f0f0f0;
+.map-overlay-inner label {
+    display: block;
+    font-weight: bold;
+    margin: 0 0 5px;
 }
 </style>
 
+
+
 <div id='map'></div>
 
-<div class='map-overlay'>
-    <fieldset>
-        <input id='feature-filter' type='text' placeholder='Filter results by name' />
-    </fieldset>
-    <div id='feature-listing' class='listing'></div>
+<div class='map-overlay top'>
+    <div class='map-overlay-inner'>
+      <div class="bootstrap-iso">
+        <div class="container-fluid">
+          <div>
+           <div>
+            <form method="post">
+             <div class="form-group ">
+              <label class="control-label " for="date">
+               Pick a date
+              </label>
+              <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
+             </div>
+             <div class="form-group">
+              <div>
+               <button class="btn btn-primary " name="submit" type="submit">
+                Submit
+               </button>
+              </div>
+             </div>
+            </form>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
 
+<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+<!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
 <script>
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2lncnVuZzE1IiwiYSI6ImNpdHp1bzVnMjAwNmQyc29heWM5aTJucmwifQ.B1Fqd31h6XueNlmOz3T-UA';
+    $(document).ready(function(){
+        var date_input=$('input[name="date"]'); //our date input has the name "date"
+        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input.datepicker({
+            format: 'dd/mm/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
+</script>
 
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1Ijoicmlra2l0aWtrIiwiYSI6ImNpdHp2M3E3aDAwNGg0NW9hdWVsb3o3eG4ifQ.Rm0pPY2uJa1DNWbPdFUVmw';
+  var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/rikkitikk/citzvfqr900g52iqizc5nf9zz',
+      center: [-96, 37.8],
+      zoom: 3
+  });
 
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/sigrung15/citzuviok00ew2itby3cwtdcp',
-    center: [-98, 38.88],
-    maxZoom: 5,
-    minZoom: 1,
-    zoom: 3
-});
-
-// Holds visible airport features for filtering
-var airports = [];
-
-// Create a popup, but don't add it to the map yet.
-var popup = new mapboxgl.Popup({
-    closeButton: false
-});
-
-var filterEl = document.getElementById('feature-filter');
-var listingEl = document.getElementById('feature-listing');
-
-
-
-function renderListings(features) {
-    // Clear any existing listings
-    listingEl.innerHTML = '';
-	
-	
-    if (features.length) {
-        features.forEach(function(feature) {
-            var prop = feature.properties;
-            var item = document.createElement('a');
-            item.href = prop.wikipedia;
-            item.target = '_blank';
-            item.textContent = prop.name + ' (' + prop.abbrev + ')';
-				
-            item.addEventListener('mouseover', function() {
-                // Highlight corresponding feature on the map
-                popup.setLngLat(feature.geometry.coordinates)
-                    .setText(feature.properties.name + ' (' + feature.properties.abbrev + ')')
-                    .addTo(map);
-            });
-			
-            listingEl.appendChild(item);
-        });
-
-        // Show the filter input
-        filterEl.parentNode.style.display = 'block';
-    } else {
-        var empty = document.createElement('p');
-        empty.textContent = 'Drag the map to populate results';
-        listingEl.appendChild(empty);
-
-        // Hide the filter input
-        filterEl.parentNode.style.display = 'none';
-
-        // remove features filter
-        map.setFilter('airport', ['has', 'abbrev']);
-    }
-}
-
-function normalize(string) {
-    return string.trim().toLowerCase();
-}
-
-function getUniqueFeatures(array, comparatorProperty) {
-    var existingFeatureKeys = {};
-    // Because features come from tiled vector data, feature geometries may be split
-    // or duplicated across tile boundaries and, as a result, features may appear
-    // multiple times in query results.
-    var uniqueFeatures = array.filter(function(el) {
-        if (existingFeatureKeys[el.properties[comparatorProperty]]) {
-            return false;
-        } else {
-            existingFeatureKeys[el.properties[comparatorProperty]] = true;
-            return true;
+  map.on('load', function () {
+    map.addSource("points", {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-77.03238901390978, 38.913188059745586]
+                },
+                "properties": {
+                    "title": "Airport",
+                    "icon": "airport"
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.414, 37.776]
+                },
+                "properties": {
+                    "title": "Mapbox SF",
+                    "icon": "harbor"
+                }
+            }]
         }
-    });
-
-    return uniqueFeatures;
-}
-
-map.on('load', function() {
-	
-	
-	
-    // Add our vector tile source: World wide
-    // airports provided by Natural Earth
-    map.addSource('airports', {
-        "type": "vector",
-        "url": "mapbox://mapbox.04w69w5j"
     });
 
     map.addLayer({
-        "id": "airport",
-        "source": "airports",
-        "source-layer": "ne_10m_airports",
+        "id": "points",
         "type": "symbol",
+        "source": "points",
         "layout": {
-            "icon-image": "airport-15",
-            "icon-padding": 0,
-            "icon-allow-overlap":true
+            "icon-image": "{icon}-15",
+            "text-field": "{title}",
+            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+            "text-offset": [0, 0.6],
+            "text-anchor": "top"
         }
     });
-	
-    map.on('moveend', function() {
-        var features = map.queryRenderedFeatures({layers:['airport']});
-        if (features) {
-            var uniqueFeatures = getUniqueFeatures(features, "iata_code");
-            // Populate features for the listing overlay.
-            renderListings(uniqueFeatures);
-
-            // Clear the input container
-            filterEl.value = '';
-
-            // Store the current features in sn `airports` variable to
-            // later use for filtering on `keyup`.
-            airports = uniqueFeatures;
-        }
-    });
-	
-
-    map.on('mousemove', function(e) {
-        var features = map.queryRenderedFeatures(e.point, {layers: ['airport']
-        });
-
-        // Change the cursor style as a UI indicator.
-        map.getCanvas().style.cursor = features.length ? 'pointer' : '';
-
-        if (!features.length) {
-            popup.remove();
-            return;
-        }
-		
-        var feature = features[0];
-        // Populate the popup and set its coordinates
-        // based on the feature found.
-        popup.setLngLat(feature.geometry.coordinates)
-            .setText(feature.properties.name + ' (' + feature.properties.abbrev + ')')
-            .addTo(map);
-	});
-	
-	//if you click somewhere on the map this happens
-	map.on('click', function(e) {
-			
-			//from here 
-			//get all airport features
-			var features = map.queryRenderedFeatures(e.point, {layers: ['airport']
-			});
-			
-			//this is the one that you clicked I think but I don`t kno why
-			var feature = features[0];
-			//the random number will be replaced by the id of the destination airport+
-			var sourceName = feature.properties.name  + Math.random().toString()
-			//the source from which the line will be drawn gets added
-			map.addSource(sourceName, {
-				"type": "geojson",
-				"data": {
-					"type": "Feature",
-					"properties": {},
-					"geometry": {
-						"type": "LineString",
-						"coordinates": [
-							//this are the departure airport's coordinates
-							[feature.geometry.coordinates[0],feature.geometry.coordinates[1]],
-							//this will be the destination airpor's coordinates
-							[-10.49378204345702, 125.83368330777276]
-						]	
-					}
-				}
-			});
-			
-			//the layer with the line gets added
-			map.addLayer({
-				"id": "route",
-				"type": "line",
-				"source": sourceName,
-				"layout": {
-					"line-join": "round",
-					"line-cap": "round"
-				},
-				"paint": {
-					"line-color": "#888",
-					"line-width": 8
-				}
-			});
-			//to here is the clicky line stuff
-			
-			//with this you could add a message to the airports
-			//popup.setLngLat(feature.geometry.coordinates)
-			//	.setText("hey baby ;)")
-			//	.addTo(map);
-			
-			
-
-	});	
-	
-    filterEl.addEventListener('keyup', function(e) {
-        var value = normalize(e.target.value);
-        // Filter visible features that don't match the input value.
-        var filtered = airports.filter(function(feature) {
-            var name = normalize(feature.properties.name);
-            var code = normalize(feature.properties.abbrev);
-            return name.indexOf(value) > -1 || code.indexOf(value) > -1;
-        });
-
-        // Populate the sidebar with filtered results
-        renderListings(filtered);
-
-        // Set the filter to populate features into the layer.
-        map.setFilter('airport', ['in', 'abbrev'].concat(filtered.map(function(feature) {
-            return feature.properties.abbrev;
-        })));
-    });
-
-    // Call this function on initialization
-    // passing an empty array to render an empty state
-    renderListings([]);
-	
-	
 });
 </script>
+
 
 </body>
 </html>
