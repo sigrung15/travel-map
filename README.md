@@ -1,6 +1,6 @@
 ﻿# Click a Trip
 
-install node
+install node v4.6.0 LTS
 
   --> https://nodejs.org/en/
 
