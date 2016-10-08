@@ -86,6 +86,8 @@
 
 <script>
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2lncnVuZzE1IiwiYSI6ImNpdHp1bzVnMjAwNmQyc29heWM5aTJucmwifQ.B1Fqd31h6XueNlmOz3T-UA';
+
+
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/sigrung15/citzuviok00ew2itby3cwtdcp',
@@ -106,9 +108,13 @@ var popup = new mapboxgl.Popup({
 var filterEl = document.getElementById('feature-filter');
 var listingEl = document.getElementById('feature-listing');
 
+
+
 function renderListings(features) {
     // Clear any existing listings
     listingEl.innerHTML = '';
+	
+	
     if (features.length) {
         features.forEach(function(feature) {
             var prop = feature.properties;
@@ -116,12 +122,14 @@ function renderListings(features) {
             item.href = prop.wikipedia;
             item.target = '_blank';
             item.textContent = prop.name + ' (' + prop.abbrev + ')';
+				
             item.addEventListener('mouseover', function() {
                 // Highlight corresponding feature on the map
                 popup.setLngLat(feature.geometry.coordinates)
                     .setText(feature.properties.name + ' (' + feature.properties.abbrev + ')')
                     .addTo(map);
             });
+			
             listingEl.appendChild(item);
         });
 
@@ -162,7 +170,9 @@ function getUniqueFeatures(array, comparatorProperty) {
 }
 
 map.on('load', function() {
-
+	
+	
+	
     // Add our vector tile source: World wide
     // airports provided by Natural Earth
     map.addSource('airports', {
@@ -181,9 +191,9 @@ map.on('load', function() {
             "icon-allow-overlap":true
         }
     });
+	
     map.on('moveend', function() {
         var features = map.queryRenderedFeatures({layers:['airport']});
-
         if (features) {
             var uniqueFeatures = getUniqueFeatures(features, "iata_code");
             // Populate features for the listing overlay.
@@ -197,10 +207,10 @@ map.on('load', function() {
             airports = uniqueFeatures;
         }
     });
+	
 
     map.on('mousemove', function(e) {
-        var features = map.queryRenderedFeatures(e.point, {
-            layers: ['airport']
+        var features = map.queryRenderedFeatures(e.point, {layers: ['airport']
         });
 
         // Change the cursor style as a UI indicator.
@@ -210,18 +220,72 @@ map.on('load', function() {
             popup.remove();
             return;
         }
-
+		
         var feature = features[0];
         // Populate the popup and set its coordinates
         // based on the feature found.
         popup.setLngLat(feature.geometry.coordinates)
             .setText(feature.properties.name + ' (' + feature.properties.abbrev + ')')
             .addTo(map);
-    });
+	});
+	
+	//if you click somewhere on the map this happens
+	map.on('click', function(e) {
+			
+			//from here 
+			//get all airport features
+			var features = map.queryRenderedFeatures(e.point, {layers: ['airport']
+			});
+			
+			//this is the one that you clicked I think but I don`t kno why
+			var feature = features[0];
+			//the random number will be replaced by the id of the destination airport+
+			var sourceName = feature.properties.name  + Math.random().toString()
+			//the source from which the line will be drawn gets added
+			map.addSource(sourceName, {
+				"type": "geojson",
+				"data": {
+					"type": "Feature",
+					"properties": {},
+					"geometry": {
+						"type": "LineString",
+						"coordinates": [
+							//this are the departure airport's coordinates
+							[feature.geometry.coordinates[0],feature.geometry.coordinates[1]],
+							//this will be the destination airpor's coordinates
+							[-10.49378204345702, 125.83368330777276]
+						]	
+					}
+				}
+			});
+			
+			//the layer with the line gets added
+			map.addLayer({
+				"id": "route",
+				"type": "line",
+				"source": sourceName,
+				"layout": {
+					"line-join": "round",
+					"line-cap": "round"
+				},
+				"paint": {
+					"line-color": "#888",
+					"line-width": 8
+				}
+			});
+			//to here is the clicky line stuff
+			
+			//with this you could add a message to the airports
+			//popup.setLngLat(feature.geometry.coordinates)
+			//	.setText("hey baby ;)")
+			//	.addTo(map);
+			
+			
 
+	});	
+	
     filterEl.addEventListener('keyup', function(e) {
         var value = normalize(e.target.value);
-
         // Filter visible features that don't match the input value.
         var filtered = airports.filter(function(feature) {
             var name = normalize(feature.properties.name);
@@ -241,6 +305,8 @@ map.on('load', function() {
     // Call this function on initialization
     // passing an empty array to render an empty state
     renderListings([]);
+	
+	
 });
 </script>
 
