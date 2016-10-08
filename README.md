@@ -10,12 +10,16 @@ Then write the command:
 
 * npm install -g gulp gulp-cli bower
 
-bower install
+* bower install
 
-npm install
+* npm install
 
-rm -rf node_modules
+* gulp serve
 
-npm install
+if npm install does not work:
 
-gulp serve
+* rm -rf node_modules
+
+* npm install
+
+
