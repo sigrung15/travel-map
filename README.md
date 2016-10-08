@@ -2,6 +2,8 @@
 
 install node
 
+  --> https://nodejs.org/en/
+
 npm install -g gulp gulp-cli bower
 
 bower install
