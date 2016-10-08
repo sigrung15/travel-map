@@ -4,7 +4,7 @@ $(document).ready(function(){
     var date_input=$('input[name="date"]'); //our date input has the name "date"
     var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
     date_input.datepicker({
-        format: 'dd-mm-yyyy',
+        format: 'yyyy-mm-dd',
         container: container,
         todayHighlight: true,
         autoclose: true,
@@ -23,9 +23,20 @@ var airportsExist = false;
 var routeExist = false;
 
 function getFares(dep, date){
+	
 
-	date = '2016-10-09';
-
+	if($('#date').length > 0 && $('#date').val() != ''){
+		date = $('#date').val();
+	}
+	else {
+		var d = new Date();
+		var month = d.getMonth()+1;
+		var day = d.getDate();
+		date = d.getFullYear() + '-' +
+	    (month<10 ? '0' : '') + month + '-' +
+	    (day<10 ? '0' : '') + day;
+	}
+	
 	var api = 'http://api.dohop.com/api/v1/livestore/en/IS/per-country/';
 	var url = api.concat(dep,"/",date,"/",date,"?currency=ISK");
 	var json = null;
