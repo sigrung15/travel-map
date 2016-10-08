@@ -922,5 +922,449 @@
 			"iata": "BOS",
 			"size": "large"
 		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [79.8865, 7.174112]
+		},
+		"properties": {
+			"title": "Bandaranaike International Colombo Airport",
+			"iata": "CMB",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [104.84778, 11.546111]
+		},
+		"properties": {
+			"title": "Phnom Penh International Airport",
+			"iata": "PNH",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [103.815926, 13.408436]
+		},
+		"properties": {
+			"title": "Angkor International Airport",
+			"iata": "REP",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [88.43931, 22.64531]
+		},
+		"properties": {
+			"title": "Netaji Subhash Chandra Bose International Airport",
+			"iata": "CCU",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [113.93649, 22.315248]
+		},
+		"properties": {
+			"title": "Chek Lap Kok International Airport",
+			"iata": "HKG",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [74.8073, 31.706741]
+		},
+		"properties": {
+			"title": "Sri Guru Ram Dass Jee International Airport, Amritsar",
+			"iata": "ATQ",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [77.10079, 28.556555]
+		},
+		"properties": {
+			"title": "Indira Gandhi International Airport",
+			"iata": "DEL",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [77.15, 31.116667]
+		},
+		"properties": {
+			"title": "Shimla Airport",
+			"iata": "SLV",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [113.57285, 22.156588]
+		},
+		"properties": {
+			"title": "Macau International Airport",
+			"iata": "MFM",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [77.70556, 13.198889]
+		},
+		"properties": {
+			"title": "Bengaluru International Airport",
+			"iata": "BLR",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [78.428055, 17.24]
+		},
+		"properties": {
+			"title": "Rajiv Gandhi International Airport, Shamshabad",
+			"iata": "HYD",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [101.70539, 2.755672]
+		},
+		"properties": {
+			"title": "Kuala Lumpur International Airport",
+			"iata": "KUL",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [103.990204, 1.361173]
+		},
+		"properties": {
+			"title": "Singapore Changi International Airport",
+			"iata": "SIN",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [153.10905, -27.40303]
+		},
+		"properties": {
+			"title": "Brisbane International Airport",
+			"iata": "BNE",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [144.84978, -37.669613]
+		},
+		"properties": {
+			"title": "Melbourne International Airport",
+			"iata": "MEL",
+			"size": "large"
+		}
+    },
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [115.960236, -31.933603]
+		},
+		"properties": {
+			"title": "Perth International Airport",
+			"iata": "PER",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [149.19052, -35.30735]
+		},
+		"properties": {
+			"title": "Canberra International Airport",
+			"iata": "CBR",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [151.1799, -33.932922]
+		},
+		"properties": {
+			"title": "Sydney Kingsford Smith International Airport",
+			"iata": "SYD",
+			"size": "large"
+		}
+    },
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [116.5871, 40.078537]
+		},
+		"properties": {
+			"title": "Beijing Capital International Airport",
+			"iata": "PEK",
+			"size": "large"
+		}
+    },
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [116.38778, 39.7825]
+		},
+		"properties": {
+			"title": "Beijing Nanyuan Airport",
+			"iata": "NAY",
+			"size": "large"
+		}
+    },
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [117.3399, 39.122627]
+		},
+		"properties": {
+			"title": "Tianjin Binhai International Airport",
+			"iata": "TSN",
+			"size": "large"
+		}
+    },
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [112.62585, 37.754997]
+		},
+		"properties": {
+			"title": "Taiyuan Wusu Airport",
+			"iata": "TYN",
+			"size": "large"
+		}
+    },
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [113.29734, 23.387861]
+		},
+		"properties": {
+			"title": "Guangzhou Baiyun International Airport",
+			"iata": "CAN",
+			"size": "large"
+		}
+    },
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [113.21459, 28.193336]
+		},
+		"properties": {
+			"title": "Changsha Huanghua Airport",
+			"iata": "CSX",
+			"size": "large"
+		}
+    },
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [110.316666, 25.133333]
+		},
+		"properties": {
+			"title": "Guilin Liangjiang International Airport",
+			"iata": "KWL",
+			"size": "large"
+		}
+    },
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [108.1675, 22.61321]
+		},
+		"properties": {
+			"title": "Nanning Wuxu Airport",
+			"iata": "NNG",
+			"size": "large"
+		}
+    },
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [113.81084, 22.639444]
+		},
+		"properties": {
+			"title": "Shenzhen Bao'an International Airport",
+			"iata": "SZX",
+			"size": "large"
+		}
+    },
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [113.84024, 34.52752]
+		},
+		"properties": {
+			"title": "Xinzheng Airport",
+			"iata": "CGO",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [109.409706, 18.31063]
+		},
+		"properties": {
+			"title": "Sanya Phoenix International Airport",
+			"iata": "SYX",
+			"size": "large"
+		}
+    },
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [108.75605, 34.441154]
+		},
+		"properties": {
+			"title": "Xi'an Xianyang International Airport",
+			"iata": "XIY",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [105.802826, 21.214184]
+		},
+		"properties": {
+			"title": "Noi Bai International Airport",
+			"iata": "HAN",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [106.655525, -6.130643]
+		},
+		"properties": {
+			"title": "Soekarno-Hatta International Airport",
+			"iata": "CGK",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [101.70539, 2.755672]
+		},
+		"properties": {
+			"title": "Kuala Lumpur International Airport",
+			"iata": "KUL",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [115.1675, -8.748056]
+		},
+		"properties": {
+			"title": "Ngurah Rai (Bali) International Airport",
+			"iata": "DPS",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [36.92578, -1.319167]
+		},
+		"properties": {
+			"title": "Jomo Kenyatta International Airport",
+			"iata": "NBO",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [28.231314, -26.132664]
+		},
+		"properties": {
+			"title": "OR Tambo International Airport",
+			"iata": "JNB",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-15.389351, 27.938944]
+		},
+		"properties": {
+			"title": "Gran Canaria Airport",
+			"iata": "LPA",
+			"size": "large"
+		}
     }
 ]

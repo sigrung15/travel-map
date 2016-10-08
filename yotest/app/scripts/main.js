@@ -23,8 +23,6 @@ var airportsExist = false;
 var routeExist = false;
 
 function getFares(dep, date){
-	
-
 	if($('#date').length > 0 && $('#date').val() != ''){
 		date = $('#date').val();
 	}
