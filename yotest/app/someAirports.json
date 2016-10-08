@@ -1,0 +1,170 @@
+[
+	{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-22.624283, 63.997765]
+		},
+		"properties": {
+			"title": "Keflavik International Airport",
+			"iata": "KEF",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [11.100411, 60.19419]
+		},
+		"properties": {
+			"title": "Oslo Gardermoen Airport",
+			"iata": "OSL",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [12.647601, 55.62905]
+		},
+		"properties": {
+			"title": "Copenhagen Kastrup Airport",
+			"iata": "CPH",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [13.291722, 52.553944]
+		},
+		"properties": {
+			"title": "Berlin-Tegel International Airport",
+			"iata": "TXL",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-0.161863, 51.156807]
+		},
+		"properties": {
+			"title": "London Gatwick Airport",
+			"iata": "LGW",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-3.364177, 55.948143]
+		},
+		"properties": {
+			"title": "Edinburgh Airport",
+			"iata": "EDI",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-6.217616, 54.662395]
+		},
+		"properties": {
+			"title": "Belfast International Airport",
+			"iata": "BFS",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [18.468655, 54.380978]
+		},
+		"properties": {
+			"title": "Gdansk Lech Walesa Airport",
+			"iata": "GDN",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [25.279606, 54.643078]
+		},
+		"properties": {
+			"title": "Vilnius International Airport",
+			"iata": "VNO",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [7.532604, 47.59961]
+		},
+		"properties": {
+			"title": "EuroAirport Basel-Mulhouse-Freiburg Airport",
+			"iata": "BSL",
+			"size": "medium"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-2.710659, 51.386757]
+		},
+		"properties": {
+			"title": "Bristol International Airport",
+			"iata": "BRS",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [2.07593, 41.30303]
+		},
+		"properties": {
+			"title": "Barcelona International Airport",
+			"iata": "BCN",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [20.97329, 52.170906]
+		},
+		"properties": {
+			"title": "Warsaw Chopin Airport",
+			"iata": "WAW",
+			"size": "large"
+		}
+    },
+    {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point", 
+			"coordinates": [-2.273354, 53.362907]
+		},
+		"properties": {
+			"title": "Manchester Airport",
+			"iata": "MAN",
+			"size": "large"
+		}
+    }
+]
