@@ -4,7 +4,7 @@ install node v4.6.0 LTS
 
   --> https://nodejs.org/en/
   
-Go to a shell you use and move into the folder: yotest.
+Go to a shell you use and go into the folder: yotest.
 
 Then write the command:
 
