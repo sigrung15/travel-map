@@ -1,9 +1,9 @@
 console.log('\'Allo \'Allo!');
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYmlya2lyIiwiYSI6ImNpdHp1cDR6YTAwNWkyeW4ycnJtMG41aGkifQ.hVHpiqX8pFDlwbVSfpqZWQ';
+mapboxgl.accessToken = 'pk.eyJ1Ijoicmlra2l0aWtrIiwiYSI6ImNpdHp2M3E3aDAwNGg0NW9hdWVsb3o3eG4ifQ.Rm0pPY2uJa1DNWbPdFUVmw';
 var map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/light-v9',
+  style: 'mapbox://styles/rikkitikk/citzvfqr900g52iqizc5nf9zz',
   center: [-10, 37.8],
   zoom: 2
 });
@@ -159,7 +159,7 @@ map.on('click', function (e) {
 	// 				//this will be the destination airpor's coordinates
 	// 				[features2[3].geometry.coordinates[0], features2[3].geometry.coordinates[1]]
 	// 				//[-10.49378204345702, 125.83368330777276]
-	// 			]	
+	// 			]
 	// 		}
 	// 	}
 	// });
@@ -178,7 +178,7 @@ map.on('click', function (e) {
 		}
 	});
 	//to here is the clicky line stuff
-	
+
 	//with this you could add a message to the airports
 	//popup.setLngLat(feature.geometry.coordinates)
 	//	.setText("hey baby ;)")
@@ -192,5 +192,3 @@ map.on('mousemove', function (e) {
     var features = map.queryRenderedFeatures(e.point, { layers: ['points'] });
     map.getCanvas().style.cursor = features.length ? 'pointer' : '';
 });
-
-
