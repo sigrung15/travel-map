@@ -16,7 +16,7 @@ Then write the command:
 
 * gulp serve
 
-if __npm install__ does not work:
+if __gulp serve__ does not work:
 
 * rm -rf node_modules
 
